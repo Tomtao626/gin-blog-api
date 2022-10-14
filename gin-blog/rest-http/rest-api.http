@@ -1,0 +1,100 @@
+# curl -X GET --location "http://192.168.27.130:8000/test"
+#    -H "Accept: application/json"
+GET http://192.168.27.130:8000/test
+Accept: application/json
+
+<> 2022-07-06T114530.200.json
+
+###
+# curl -X GET --location "http://192.168.27.130:8000/api/v1/tags"
+#    -H "Accept: application/json"
+GET http://192.168.27.130:8000/api/v1/tags
+Accept: application/json
+
+###
+# curl -X POST --location "http://192.168.27.130:8000/api/v1/tags?name=%E5%BC%A0%E4%B8%89&state=1&created_by=tomtao"
+#    -H "Accept: application/json"
+POST http://192.168.27.130:8000/api/v1/tags?name=%E5%BC%A0%E4%B8%89&state=1&created_by=tomtao
+Accept: application/json
+
+<> 2022-07-06T145856.200.json
+<> 2022-07-06T145847.200.json
+<> 2022-07-06T145842.200.json
+<> 2022-07-06T145838.200.json
+<> 2022-07-06T144807.200.json
+<> 2022-07-06T144749.200.json
+<> 2022-07-06T144740.200.json
+<> 2022-07-06T144730.200.json
+<> 2022-07-06T144655.200.json
+
+###
+# curl -X PUT --location "http://192.168.27.130:8000/api/v1/tags/1?name=edit1&state=0&modified_by=edit1"
+#    -H "Accept: application/json"
+PUT http://192.168.27.130:8000/api/v1/tags/1?name=edit1&state=0&modified_by=edit1
+Accept: application/json
+
+<> 2022-07-06T154715.200.json
+<> 2022-07-06T154704.200.json
+<> 2022-07-06T154557.200.json
+<> 2022-07-06T154534.200.json
+<> 2022-07-06T154457.200.json
+<> 2022-07-06T153910.200.json
+<> 2022-07-06T153909.200.json
+<> 2022-07-06T153837.200.json
+<> 2022-07-06T153745.200.json
+<> 2022-07-06T153743.200.json
+<> 2022-07-06T153717.404.txt
+<> 2022-07-06T153656.404.txt
+
+###
+# curl -X GET --location "http://192.168.27.130:8000/api/v1/articles?page=1&limit=10"
+#    -H "Accept: application/json"
+GET http://192.168.27.130:8000/api/v1/articles?page=1&limit=10?token=eyJhbGciOiJIffsdUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRvbXRhbyIsInBhc3N3b3JkIjoidGVzdDEyMzQ1NiIsImV4cCI6MTY1NzExMjYzOSwiaXNzIjoiZ2luLWJsb2cifQ.jhcbsfv287H-0UXwh75jQ0mozKL7R-qcfAVPv-gQZDA
+Accept: application/json
+
+<> 2022-07-06T154651.200.json
+
+###
+GET http://192.168.27.130:8000/api/v1/articles?page=1&limit=10&tag_id=0&state=9999999
+Accept: application/json
+
+###
+# curl -X GET --location "http://192.168.27.130:8000/api/v1/articles/1"
+#    -H "Accept: application/json"
+GET http://192.168.27.130:8000/api/v1/article/1
+Accept: application/json
+
+###
+# curl -X POST --location "http://192.168.27.130:8000/api/v1/articles?tag_id=2&title=test2&desc=test2-desc&content=test2-content&created_by=test2-created&state=1"
+#    -H "Accept: application/json"
+POST http://192.168.27.130:8000/api/v1/articles?tag_id=2&title=test2&desc=test2-desc&content=test2-content&created_by=test2-created&state=1
+Accept: application/json
+
+<> 2022-07-06T172334.200.json
+<> 2022-07-06T172317.200.json
+<> 2022-07-06T172214.200.json
+<> 2022-07-06T171943.200.json
+<> 2022-07-06T171427.200.json
+<> 2022-07-06T170439.200.json
+<> 2022-07-06T170336.200.json
+
+###
+# curl -X PUT --location "http://192.168.27.130:8000/api/v1/articles/5?tag_id=2&title=%E6%B5%8B%E8%AF%951111&desc=gsadghsd&content=%E4%BD%A0%E5%A5%BD%E5%B8%85%E5%91%80&modified_by=edit1&state=1"
+#    -H "Accept: application/json"
+PUT http://192.168.27.130:8000/api/v1/articles/5?tag_id=2&title=%E6%B5%8B%E8%AF%951111&desc=gsadghsd&content=%E4%BD%A0%E5%A5%BD%E5%B8%85%E5%91%80&modified_by=edit1&state=1
+Accept: application/json
+
+<> 2022-07-06T172534.200.json
+
+###
+# curl -X DELETE --location "http://192.168.27.130:8000/api/v1/articles/3"
+#    -H "Accept: application/json"
+DELETE http://192.168.27.130:8000/api/v1/articles/3
+Accept: application/json
+
+<> 2022-07-06T172804.200.json
+<> 2022-07-06T172603.200.json
+
+###
+GET http://192.168.27.130:8000/auth?username=tomtao&password=test123456
+Accept: application/json

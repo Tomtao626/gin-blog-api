@@ -1,0 +1,24 @@
+type Request {
+	Name string `path:"name"`
+}
+
+/*
+type Response {
+	Name string `path:"name,options=you|me"`
+}
+*/
+
+type Response {
+	Message string `json:"message"`
+}
+
+type RequestJson {
+	Name string `json:"name"`
+}
+
+service greet-api {
+	@handler GreetHandler
+	get /from/:name(Request) returns (Response)
+	@handler GreetPostHandler
+	post /from/:name(RequestJson) returns (Response)
+}

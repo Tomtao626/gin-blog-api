@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "./user";
+
+message IdRequest {
+  string id = 1;
+}
+
+message Response {
+  // id
+  string id  = 1;
+  // name
+  string name = 2;
+  // gender
+  string gender = 3;
+}
+
+service User {
+  rpc getUser(IdRequest) returns(Response);
+}
